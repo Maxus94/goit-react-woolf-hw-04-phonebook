@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import css from './ContactForm.module.css';
-export const ContactForm = props => {
+export const ContactForm = ({ createContact }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -17,9 +17,9 @@ export const ContactForm = props => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    props.createContact(name, number);
-    setName(name);
-    setNumber(number);
+    createContact(name, number);
+    setName('');
+    setNumber('');
   };
 
   return (

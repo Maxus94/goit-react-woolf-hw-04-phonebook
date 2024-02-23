@@ -47,7 +47,7 @@ export const App = () => {
   return (
     <div className={css.container}>
       <h1>Phonebook</h1>
-      <ContactForm contacts={contacts} createContact={createContact} />
+      <ContactForm createContact={createContact} />
       <h2>Contacts</h2>
       <Filter handleChange={handleChange} />
       <ContactList contacts={filterContacts()} handleDelete={handleDelete} />

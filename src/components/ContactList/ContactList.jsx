@@ -1,15 +1,15 @@
 import css from './ContactList.module.css';
 
-export const ContactList = props => {
+export const ContactList = ({ contacts, handleDelete }) => {
   return (
     <ul className={css.contactList}>
-      {props.contacts.map(contact => (
+      {contacts.map(contact => (
         <li key={contact.id}>
           {contact.name}: {contact.number}
           <button
             className={css.itemButton}
             type="button"
-            onClick={() => props.handleDelete(contact.id)}
+            onClick={() => handleDelete(contact.id)}
           >
             Delete
           </button>
